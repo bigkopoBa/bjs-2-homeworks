@@ -4,14 +4,15 @@ function solveEquation(a, b, c) {
 	let arr;
 	let d = (Math.pow(b, 2)) - (4 * a * c);
 	if (d < 0) {
-		return arr = [];
+		arr = [];
 	}
 	if (d === 0) {
-		return arr = [-b / (2 * a)];
+		arr = [-b / (2 * a)];
 	}
 	if (d > 0) {
-		return arr = [(-b + Math.sqrt(d)) / (2 * a), (-b - Math.sqrt(d)) / (2 * a)];
+		arr = [(-b + Math.sqrt(d)) / (2 * a), (-b - Math.sqrt(d)) / (2 * a)];
 	}
+	return arr
 }
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
@@ -29,5 +30,5 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 		toEqual = contribution + (result * countMonths);
 		console.log('Ввод: ' + percent + ', ' + contribution + ', ' + amount + ', ' + countMonths + '. Вывод: ' + (Math.floor(toEqual * 100) / 100))
 	}
-	return toEqual.toFixed(2);
+	return Number(toEqual.toFixed(2));
 }
